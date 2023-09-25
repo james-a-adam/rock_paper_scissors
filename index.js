@@ -1,8 +1,6 @@
 //setting initial score to zero
 let playerScore = 0;
 let computerScore = 0;
-<<<<<<< HEAD
-=======
 
 //select elements
 const rockBtn = document.querySelector('.rock');
@@ -11,7 +9,6 @@ const scissorsBtn = document.querySelector('.scissors');
 const outcomeDiv = document.querySelector('.outcome');
 const playerScoreDisplay = document.querySelector('.player-score');
 const computerScoreDisplay = document.querySelector('.computer-score');
->>>>>>> rps-ui
 
 //random computer choice
 function computerPlay () {
@@ -23,54 +20,18 @@ function computerPlay () {
 
 //play a round and return result
 function playRound (playerSelection, computerSelection) {
-<<<<<<< HEAD
-    if (playerSelection === computerSelection) {
-        return `Its a tie! You both chose ${playerSelection}`
-=======
     // console.log('1', playerSelection, '2', computerSelection)
     const p = document.createElement('p');
 
     if (playerSelection === computerSelection) {
         p.innerText = `Its a tie! You both chose ${playerSelection}`
         outcomeDiv.appendChild(p)
->>>>>>> rps-ui
     } else if (
             playerSelection === 'rock' && computerSelection === 'scissors' ||
             playerSelection === 'paper' && computerSelection === 'rock' ||
             playerSelection === 'scissors' && computerSelection === 'paper'
         ){
             playerScore++
-<<<<<<< HEAD
-            return `Player Wins! ${playerSelection} beats ${computerSelection}`
-    } else {
-            computerScore++
-            return `Computer Wins! ${computerSelection} beats ${playerSelection}`
-    }
-}
-
-//looping the game 5 times
-//also looping random player and computer selection 5 times
-function game () {
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt ('Make your choice', 'Rock, Paper, Scissors').toLowerCase();
-        const computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-    }
-
-
-    //check who won
-    if (playerScore > computerScore) {
-        return "You win! You are a genius!"
-    } else if (computerScore > playerScore) {
-        return "The Machine wins! Suckaaaa"
-    } else {
-        return "It's a dang tie"
-    }
-    
-}
-
-console.log(game());
-=======
             p.innerText = `Player Wins! ${playerSelection} beats ${computerSelection}`
             outcomeDiv.appendChild(p)
     } else {
@@ -156,4 +117,3 @@ scissorsBtn.addEventListener('click', () => {
 // }
 
 // console.log(game());
->>>>>>> rps-ui
